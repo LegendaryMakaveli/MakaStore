@@ -108,11 +108,13 @@ if (error || isError) return <p>Error while loading</p>;
                   key={product.id}
                   className="w-60 p-4 hover:shadow-lg transition"
                 >
-                  <img
-                    src={product.thumbnail}
-                    alt={product.title}
-                    className="h-60 w-full object-cover bg-[#F2F0F1] rounded-3xl"
-                  />
+                  <Link to={`/products/${product.id}`}>
+                    <img
+                      src={product.thumbnail}
+                      alt={product.title}
+                      className="h-60 w-full object-cover bg-[#F2F0F1] rounded-3xl"
+                    />
+                  </Link>
 
                   <p className="mt-4 font-semibold text-sm">
                     {product.title}
@@ -153,11 +155,13 @@ if (error || isError) return <p>Error while loading</p>;
                 key={product.id}
                 className="p-4 hover:shadow-lg transition w-60"
               >
-                <img
-                  src={product.thumbnail}
-                  alt={product.title}
-                  className="h-60 w-full object-cover bg-[#F2F0F1] rounded-3xl shadow-md"
-                />
+                <Link to={`/products/${product.id}`}>
+                  <img
+                    src={product.thumbnail}
+                    alt={product.title}
+                    className="h-60 w-full object-cover bg-[#F2F0F1] rounded-3xl shadow-md"
+                  />
+                </Link>
                 <p className="mt-4 font-semibold text-sm">{product.title}</p>
                 <RoundStarRating rating={product.rating} size="text-md" />
                 <p className="mt-2 font-bold text-lg">${product.price}</p>
