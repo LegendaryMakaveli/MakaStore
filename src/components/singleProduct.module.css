@@ -1,0 +1,61 @@
+.container{
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center; 
+}
+.containerImage{
+   box-shadow: 10px 0 5px rgb(49, 49, 49); 
+   border-radius: 20px;
+}
+.containerImage:hover{
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+.containerTitle{
+    font-size: 20px;
+    margin-top: 10px;
+    color: rgb(49, 49, 49);
+    font-weight: bold;
+}
+.containerCategory{
+    font-size: 20px;
+    color: rgb(49, 49, 49);
+    font-weight: bolder;
+}
+.containerRating{
+    margin-top: 10px;
+    font-size: 15px;
+    color: rgb(29, 241, 29);
+    font-weight: bold;
+}
+.containerReview{
+    font-size: 15px;
+    color: rgb(29, 241, 29);
+    font-weight: bold;
+}
+.button{
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    border-style: none;
+    background-color: red;
+    border-radius: 20px;
+    color: white;
+}
+.button:hover{
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+.h1{
+    font-size: 20px;
+    margin-top: 10px;
+    color: red;
+    font-weight: bolder;
+}
+.containerDescription{
+    font-size: 15px;
+    color: rgb(102, 101, 101);
+    font-weight: bold;
+}

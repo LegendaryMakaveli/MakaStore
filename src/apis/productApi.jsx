@@ -13,7 +13,16 @@ export const productApi = createApi({
         getSingleProduct:builder.query({
             query:(id)=>`/products/${id}`
         }),
+
+        getJustFourProducts: builder.query({
+            query: () => "/products?limit=4",
+        }),
+        getProductsRange: builder.query({
+            query: ({ skip = 0, limit = 4 }) =>
+             `/products?skip=${skip}&limit=${limit}`,
+        }),
     }),
 });
 
-export const {useGetAllProductsQuery, useGetSingleProductQuery} = productApi;
+export const {useGetAllProductsQuery, useGetSingleProductQuery, 
+            useGetJustFourProductsQuery, useGetProductsRangeQuery} = productApi;
