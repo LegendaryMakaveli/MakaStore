@@ -105,11 +105,18 @@ if (error || isError) return <p>Error while loading</p>;
     <>
       <NavBar />
 
-      <div className="max-w-7xl mx-auto px-4 py-10">
-        <p className="text-sm text-gray-500 mb-6">
-          Home &gt; Shop &gt; {product.category}
-        </p>
-
+      <div className="max-w-7xl mx-auto px-4 py-10">  
+        <div className="flex justify-between items-center">
+          <p className="text-sm text-gray-500 mb-6">
+            Home &gt; Shop &gt; {product.category}
+          </p>
+              <Link to="/" className="text-sm text-gray-600">
+                <button className="w-[100px] h-[30px] border rounded-full bg-[#F0F0F0] mb-6 font-extrabold">
+                  Back to Home
+                </button>
+              </Link>
+        </div>
+        
         <div className="grid md:grid-cols-2 gap-10">
           <div className="flex gap-4">
             <div className="flex flex-col gap-3">
@@ -218,15 +225,6 @@ if (error || isError) return <p>Error while loading</p>;
             </div>
             <div className="text-end">
               <CartIcon />
-            </div>
-
-            <div className="mt-6">
-              <Link
-                to="/"
-                className="text-sm underline text-gray-600"
-              >
-                Back to Home
-              </Link>
             </div>
           </div>
         </div>
@@ -383,9 +381,9 @@ if (error || isError) return <p>Error while loading</p>;
                   </button>
                 </div>
               </div>
-            </section>
+      </section>
       
-            <footer className="bg-gray-100 mt-20">
+      <footer className="bg-gray-100 mt-20">
               <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-5 gap-10">
       
                 <div className="col-span-2 md:col-span-1">
@@ -457,7 +455,7 @@ if (error || isError) return <p>Error while loading</p>;
                   <SiGooglepay />
                 </div>
               </div>
-            </footer>
+      </footer>
 
     </>
   );
