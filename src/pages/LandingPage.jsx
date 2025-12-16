@@ -300,7 +300,7 @@ if (error || isError) return <p>Error while loading</p>;
         <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-5 gap-10">
 
           <div className="col-span-2 md:col-span-1">
-            <h4 className="text-xl font-bold mb-4">SHOP.CO</h4>
+            <h4 className="text-xl font-bold mb-4">MAKA.CO</h4>
             <p className="text-gray-600 text-sm mb-6">
               We have clothes that suit your style and which you’re proud to wear.
               From women to men.
