@@ -4,6 +4,8 @@ import browseOne from "../assets/browseOne.png";
 import browseTwo from "../assets/browseTwo.png";
 import browseThree from "../assets/browseThree.png";
 import BrowseFour from "../assets/BrowseFour.png";
+import { FaApplePay, FaCcMastercard, FaCcVisa, FaPaypal } from "react-icons/fa";
+import { SiGooglepay } from "react-icons/si";
 import { useGetJustFourProductsQuery } from "../apis/productApi";
 import RoundStarRating from "../components/ratings/roundRating";
 import { useGetProductsRangeQuery } from "../apis/productApi";
@@ -353,8 +355,18 @@ if (error || isError) return <p>Error while loading</p>;
           </div>
         </div>
 
-        <div className="border-t text-center py-6 text-sm text-gray-500">
-          Maka.co © 2000–2025, All Rights Reserved
+        <div className="border-t ml-3 mr-3 py-6 text-sm text-gray-500 flex flex-col md:flex-row items-center justify-between gap-4">
+          <span>
+            Maka.co © 2000–2025, All Rights Reserved
+          </span>
+
+          <div className="flex items-center gap-4 text-2xl text-gray-600">
+            <FaCcVisa />
+            <FaCcMastercard />
+            <FaPaypal />
+            <FaApplePay />
+            <SiGooglepay />
+          </div>
         </div>
       </footer>
     </div>
