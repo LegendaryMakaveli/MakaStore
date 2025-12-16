@@ -144,7 +144,7 @@ const SingleProduct = () => {
                 Add to Cart
               </button>
             </div>
-            <div className="text-end mr-8">
+            <div className="text-end mr-15">
               <CartIcon />
             </div>
 
