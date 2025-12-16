@@ -19,8 +19,11 @@ export const loginAndSignUpApi = createApi({
                 method: "POST",
                 body:data
             })
-        })
-    })
-});
+        }),
+        getUser: builder.query({
+      query: (id) => `/users/${id}`
+    }),
+})
+})
 
-export const { useRegisterMutation, useLoginMutation} = loginAndSignUpApi;
+export const { useRegisterMutation, useLoginMutation, useGetUserQuery } = loginAndSignUpApi;

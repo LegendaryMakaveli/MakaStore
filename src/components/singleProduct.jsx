@@ -223,7 +223,7 @@ if (error || isError) return <p>Error while loading</p>;
                 Add to Cart
               </button>
             </div>
-            <div className="text-end">
+            <div className="text-end mr-15">
               <CartIcon />
             </div>
           </div>

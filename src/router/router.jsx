@@ -6,6 +6,9 @@ import SingleProduct from "../components/singleProduct.jsx";
 import CartPage from "../pages/cartPage.jsx";
 import SignUp from "../auth/signUp/SignUp.jsx";
 import Login from "../auth/login/Login.jsx";
+import FilterPage from "../pages/filter.jsx";
+import DashBoard from "../pages/dashBoard.jsx";
+import Profile from "../pages/profile.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <LandingPage /> },
@@ -14,6 +17,9 @@ const router = createBrowserRouter([
   {path: "/cart", element: <CartPage />},
   {path: "/signup", element: <SignUp />},
   {path: "/login", element: <Login />},
+  {path: "/filter", element: <FilterPage />},
+  {path: "/dashboard", element: <DashBoard />},
+  {path: "/profile", element: <Profile />},
 ]);
 
 export default router;

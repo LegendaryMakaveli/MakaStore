@@ -26,9 +26,10 @@ const Login = ({ onSwitch, onClose }) => {
     try {
       const response = await login(formData).unwrap();
       localStorage.setItem("token", response.token);
+      localStorage.setItem("userId", response.id);
 
-      onClose?.();       // close modal
-      navigate("/products");
+      onClose?.();  
+      navigate("/dashboard");
     } catch (err) {
       setError("Invalid username or password");
       console.log(err);
