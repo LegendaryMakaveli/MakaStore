@@ -31,6 +31,7 @@ const Login = ({ onSwitch, onClose }) => {
       navigate("/products");
     } catch (err) {
       setError("Invalid username or password");
+      console.log(err);
     }
   };
 
