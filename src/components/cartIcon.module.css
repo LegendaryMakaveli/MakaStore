@@ -1,6 +1,5 @@
 .cartIconContainer {
-    position: fixed;
-    bottom: 10px;
+    position: relative;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
