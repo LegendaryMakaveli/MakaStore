@@ -111,7 +111,7 @@ if (error || isError) return <p>Error while loading</p>;
             Home &gt; Shop &gt; {product.category}
           </p>
               <Link to="/" className="text-sm text-gray-600">
-                <button className="w-[100px] h-[30px] border rounded-full bg-[#F0F0F0] mb-6 font-extrabold">
+                <button className="w-[120px] h-[30px] border rounded-full bg-[#F0F0F0] mb-6 font-extrabold">
                   Back to Home
                 </button>
               </Link>
