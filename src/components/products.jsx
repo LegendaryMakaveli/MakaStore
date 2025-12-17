@@ -3,8 +3,8 @@ import { useGetAllProductsQuery } from "../apis/productApi";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/cart/cartSlice";
 import styles from "./product.module.css";
-import CartIcon from "./cartIcon";
 import {Link} from "react-router"
+import NavBar from "./NavBar";
 
 const Products = () => {
     const { data, isLoading, isError, error } = useGetAllProductsQuery();
@@ -27,11 +27,11 @@ const Products = () => {
 
     return (
         <>
+        <NavBar />
         <Link to="/dashboard">
                     <button className="ml-10 mt-5 border w-[130px] h-[40px] bg-green-900 rounded-full text-white">Back To Profile</button>
         </Link>
             <div style={{ display: "flex", justifyContent: "flex-end", padding: "20px" }}>
-            <CartIcon />
             </div>
              <div className={styles.productContainer}>
                 {data.products.map((product) => (

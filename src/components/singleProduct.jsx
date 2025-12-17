@@ -9,7 +9,6 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaPinterestP } from "react-icons/f
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import NavBar from "./NavBar";
-import CartIcon from "./cartIcon"
 
 const SingleProduct = () => {
   const { id } = useParams();
@@ -110,7 +109,7 @@ if (error || isError) return <p>Error while loading</p>;
           <p className="text-sm text-gray-500 mb-6">
             Home &gt; Shop &gt; {product.category}
           </p>
-              <Link to="/" className="text-sm text-gray-600">
+              <Link to="/landingpage" className="text-sm text-gray-600">
                 <button className="w-[120px] h-[30px] border rounded-full bg-[#F0F0F0] mb-6 font-extrabold">
                   Back to Home
                 </button>
@@ -224,7 +223,6 @@ if (error || isError) return <p>Error while loading</p>;
               </button>
             </div>
             <div className="text-end mr-15">
-              <CartIcon />
             </div>
           </div>
         </div>

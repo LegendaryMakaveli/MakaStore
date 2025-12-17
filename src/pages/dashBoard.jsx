@@ -1,5 +1,6 @@
 import { useGetUserQuery } from "../apis/loginAndSignUpApi";
 import { Link } from "react-router";
+import NavBar from "../components/NavBar";
 
 const DashBoard = () => {
   const userId = localStorage.getItem("userId")
@@ -16,7 +17,8 @@ const DashBoard = () => {
   return (
 
     <>
-    <Link to="/">
+    <NavBar />
+    <Link to="/landingpage">
         <button className="ml-10 mt-5 border w-[100px] h-[30px] bg-green-900 rounded-full text-white">Home</button>
     </Link>
         <div className="max-w-6xl mx-auto px-4 py-10">
@@ -58,9 +60,6 @@ const DashBoard = () => {
 
         <section className="justify-evenly">
             <div className="text-center space-y-4 mt-10 gap-10">
-                <Link to="/profile">
-                    <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition mr-10">View Profile</button>
-                </Link>
                 <Link to="/products">
                     <button className="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition">View Available Products</button>
                 </Link>

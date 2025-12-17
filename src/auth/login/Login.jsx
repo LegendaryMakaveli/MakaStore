@@ -29,7 +29,7 @@ const Login = ({ onSwitch, onClose }) => {
       localStorage.setItem("userId", response.id);
 
       onClose?.();  
-      navigate("/dashboard");
+      navigate("/landingpage");
     } catch (err) {
       setError("Invalid username or password");
       console.log(err);
@@ -37,55 +37,57 @@ const Login = ({ onSwitch, onClose }) => {
   };
 
   return (
-    <div className="min-h-full flex flex-col justify-end">
-      <h2 className="text-2xl font-semibold text-center mb-6">
-        Login
-      </h2>
-
-      <form
-        onSubmit={submitHandle}
-        className="flex flex-col gap-4 justify-center items-center"
-      >
-        <input
-          name="username"
-          type="text"
-          placeholder="Username"
-          onChange={handleChange}
-          className="w-full p-3 border rounded-md outline-none focus:ring-2 focus:ring-black"
-        />
-
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          onChange={handleChange}
-          className="w-full p-3 border rounded-md outline-none focus:ring-2 focus:ring-black"
-        />
-
-        {error && (
-          <p className="text-red-500 text-sm text-center">
-            {error}
-          </p>
-        )}
-
-        <button
-          type="submit"
-          className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-900 transition"
-        >
+    <>
+      <div className="flex flex-col justify-center">
+        <h2 className="text-2xl font-semibold text-center mb-6">
           Login
-        </button>
-      </form>
+        </h2>
 
-      <p className="text-sm text-center mt-6">
-        Don’t have an account?{" "}
-        <button
-          onClick={() => onSwitch("signup")}
-          className="text-black font-medium underline"
+        <form
+          onSubmit={submitHandle}
+          className="flex flex-col gap-4 justify-center items-center"
         >
-          Sign up
-        </button>
-      </p>
-    </div>
+          <input
+            name="username"
+            type="text"
+            placeholder="Username"
+            onChange={handleChange}
+            className="w-[400px] p-3 border rounded-md outline-none focus:ring-2 focus:ring-black"
+          />
+
+          <input
+            name="password"
+            type="password"
+            placeholder="Password"
+            onChange={handleChange}
+            className="w-[400px] p-3 border rounded-md outline-none focus:ring-2 focus:ring-black"
+          />
+
+          {error && (
+            <p className="text-red-500 text-sm text-center">
+              {error}
+            </p>
+          )}
+
+          <button
+            type="submit"
+            className="w-[400px] bg-black text-white py-3 rounded-md hover:bg-gray-900 transition"
+          >
+            Login
+          </button>
+        </form>
+
+        <p className="text-sm text-center mt-6">
+          Don’t have an account?{" "}
+          <button
+            onClick={() => onSwitch("signup")}
+            className="text-black font-medium underline"
+          >
+            Sign up
+          </button>
+        </p>
+      </div>
+    </>
   );
 };
 

@@ -11,12 +11,12 @@ import DashBoard from "../pages/dashBoard.jsx";
 import Profile from "../pages/profile.jsx";
 
 const router = createBrowserRouter([
-  { path: "/", element: <LandingPage /> },
+  { path: "/", element: <Login /> },
   { path: "/products", element: <Products /> },
   {path: "/products/:id", element: <SingleProduct />},
   {path: "/cart", element: <CartPage />},
   {path: "/signup", element: <SignUp />},
-  {path: "/login", element: <Login />},
+  {path: "/LandingPage", element: <LandingPage/>},
   {path: "/filter", element: <FilterPage />},
   {path: "/dashboard", element: <DashBoard />},
   {path: "/profile", element: <Profile />},
