@@ -1,35 +1,14 @@
-import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import { persistStore, persistReducer } from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
+import {configureStore,} from '@reduxjs/toolkit';
+import {productApi} from "../apis/productApi";
+import cartReducer from "../features/cart/cartSlice";
+import { loginAndSignUpApi } from '../apis/loginAndSignUpApi';
 
-import { productApi } from '../apis/productApi'
-import { loginAndSignUpApi } from '../apis/loginAndSignUpApi'
-import cartReducer from '../features/cart/cartSlice'
-
-const persistConfig = {
-  key: 'root',
-  storage,
-  whitelist: ['cart'],
-}
-
-const rootReducer = combineReducers({
-  cart: cartReducer,
-  [productApi.reducerPath]: productApi.reducer,
-  [loginAndSignUpApi.reducerPath]: loginAndSignUpApi.reducer,
-})
-
-const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
-  reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: false,
-    }).concat(
-      productApi.middleware,
-      loginAndSignUpApi.middleware
-    ),
-})
-
-
-export const persistor = persistStore(store)
+    reducer: {
+        [productApi.reducerPath]: productApi.reducer,
+        cart: cartReducer,
+        [loginAndSignUpApi.reducerPath]: loginAndSignUpApi.reducer
+    },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(productApi.middleware, loginAndSignUpApi.middleware),
+});
